@@ -66,7 +66,7 @@ Once you have a virtual environment activated, run the pip install command menti
 ## Running the Project
 To run the Flask server, execute the following command:
 
-`python app.py`
+```python app.py```
 
 This will start the Flask development server and make the application accessible at `http://0.0.0.0:5000.`
 
