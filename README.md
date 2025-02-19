@@ -25,3 +25,7 @@ The code utilizes several libraries for functionalities like web development, co
 3. __OpenCV (cv2):__ A powerful library for computer vision tasks like image and video processing.
 4. __face_recognition:__ A wrapper library built on top of dlib, simplifying facial recognition tasks.
 
+### Installation
+
+#### Using 
+
