@@ -63,6 +63,19 @@ Once you have a virtual environment activated, run the pip install command menti
 19. `process_video(video_capture, camera_id, known_face_encodings, known_face_names, current_date, window_name, db_connection)`: Processes video feed, recognizes faces, and logs attendance.
 20. `prg_run()`: Runs the face recognition program, capturing video from multiple cameras and logging data.
 
+## Running the Project
+To run the Flask server, execute the following command:
+
+`python app.py`
+
+This will start the Flask development server and make the application accessible at `http://0.0.0.0:5000.`
+
+## Conclusion
+By following the steps outlined in this README, you'll have a functional facial recognition attendance system set up, capable of recognizing individuals and logging their attendance in a MySQL database.
+
+For More 
+contact:<a name="my-custom-anchor-point">hemalathank9207@gmail.com</a>
+
 
 
 
