@@ -42,26 +42,26 @@ Once you have a virtual environment activated, run the pip install command menti
 * If you encounter any issues during installation, refer to the official documentation of each library for troubleshooting steps.
 
 ## Function Explanations
-1. main_page(): Renders the main page.
-2. nav_dept_login(): Navigates to the department login page.
-3. search_data(): Navigates to the search data page.
-4. login(): Handles department login.
-5. logout(): Logs out the current user and redirects to the main page.
-7. navindex(): Navigates to the index page if the user is logged in, otherwise redirects to the login page.
-8. index(): Navigates to the index page if the user is logged in, otherwise redirects to the login page.
-9. search(): Navigates to the search page.
-10. existing_list(): Displays a list of existing students if the user is logged in, otherwise redirects to the login page.
-11. delete_student(): Deletes a student record from the database.
-12. add_student(): Navigates to the add student page.
-13. add_staff(): Navigates to the add staff page.
-14. data_search(): Displays a dropdown of subject codes based on the logged-in department's branch.
-15. submit_form(): Handles the submission of the add student form, validates input, and captures student images.
-16. capture_images(usn): Captures images of a student using the webcam.
-17. search_data_view(): Searches and displays attendance data for a specific student.
-18. tryy(): Renders a test template.
-19. fetch_start_end_times(): Fetches start and end times from the subject_log table in the database.
-process_video(video_capture, camera_id, known_face_encodings, known_face_names, current_date, window_name, db_connection): Processes video feed, recognizes faces, and logs attendance.
-20. prg_run(): Runs the face recognition program, capturing video from multiple cameras and logging data.
+1. `main_page()`: Renders the main page.
+2. `nav_dept_login()`: Navigates to the department login page.
+3. `search_data()`: Navigates to the search data page.
+4. `login()`: Handles department login.
+5. `logout()`: Logs out the current user and redirects to the main page.
+6. `navindex()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+7. `index()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+8. `search()`: Navigates to the search page.
+9. `existing_list()`: Displays a list of existing students if the user is logged in, otherwise redirects to the login page.
+10. `delete_student()`: Deletes a student record from the database.
+11. `add_student()`: Navigates to the add student page.
+12. `add_staff()`: Navigates to the add staff page.
+13. `data_search()`: Displays a dropdown of subject codes based on the logged-in department's branch.
+14. `submit_form()`: Handles the submission of the add student form, validates input, and captures student images.
+15. `capture_images(usn)`: Captures images of a student using the webcam.
+16. `search_data_view()`: Searches and displays attendance data for a specific student.
+17. `tryy()`: Renders a test template.
+18. `fetch_start_end_times()`: Fetches start and end times from the subject_log table in the database.
+19. `process_video(video_capture, camera_id, known_face_encodings, known_face_names, current_date, window_name, db_connection)`: Processes video feed, recognizes faces, and logs attendance.
+20. `prg_run()`: Runs the face recognition program, capturing video from multiple cameras and logging data.
 
 
 
