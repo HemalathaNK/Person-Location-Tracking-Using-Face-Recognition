@@ -8,3 +8,8 @@ This project implements a facial recognition-based person location tracking syst
 * __FrontEnd:__ HTML, CSS
 * __Database:__ MySQL (via XAMPP)
 * __IDE:__ VS Code
+
+## Requirements
+
+# Software
+
