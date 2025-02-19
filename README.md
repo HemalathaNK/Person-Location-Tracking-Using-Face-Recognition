@@ -74,7 +74,7 @@ This will start the Flask development server and make the application accessible
 By following the steps outlined in this README, you'll have a functional facial recognition attendance system set up, capable of recognizing individuals and logging their attendance in a MySQL database.
 
 For More 
-contact:<a name="my-custom-anchor-point">hemalathank9207@gmail.com</a>
+contact: <a name="my-custom-anchor-point">hemalathank9207@gmail.com</a>
 
 
 
