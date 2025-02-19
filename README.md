@@ -27,5 +27,5 @@ The code utilizes several libraries for functionalities like web development, co
 
 ### Installation
 
-#### Using <pip>
+**Using** <a name="my-custom-anchor-point">Pip</a>
 
