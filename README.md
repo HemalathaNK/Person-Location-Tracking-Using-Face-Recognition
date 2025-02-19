@@ -11,5 +11,5 @@ This project implements a facial recognition-based person location tracking syst
 
 ## Requirements
 
-# Software
+### Software
 
