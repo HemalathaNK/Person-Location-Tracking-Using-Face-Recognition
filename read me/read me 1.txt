@@ -1,0 +1,93 @@
+# Person Location Tracking Using Face Recognition
+
+## Overview
+
+This project implements a facial recognition-based person location tracking system. It uses Python for the backend and HTML/CSS for the frontend. The system captures and processes video from cameras, identifies individuals using facial recognition, and logs attendance data in a MySQL database.
+
+## Technologies Used
+
+- **Backend:** Python
+- **Frontend:** HTML, CSS
+- **Database:** MySQL (via XAMPP)
+- **IDE:** VS Code
+
+## Requirements
+
+### Software
+
+- **VS Code:** For coding and development.
+- **DroidCam:** To use a mobile device as an external camera.
+  - [DroidCam Client for Laptop](https://www.dev47apps.com/droidcam/windows/)
+  - DroidCam app for mobile (available on respective app stores)
+
+### Libraries
+
+The code utilizes several libraries for functionalities like web development, computer vision, and facial recognition.
+
+1. **Flask:** A lightweight web application framework for Python.
+2. **MySQL Connector/Python:** Enables connecting to MySQL databases from Python applications.
+3. **OpenCV (cv2):** A powerful library for computer vision tasks like image and video processing.
+4. **face_recognition:** A wrapper library built on top of dlib, simplifying facial recognition tasks.
+
+### Installation
+
+#### Using `pip`
+
+Open a terminal or command prompt and run the following command to install all the required libraries:
+
+```bash
+pip install flask mysql-connector-python opencv-python face-recognition
+```
+
+#### Using Virtual Environments (Recommended)
+
+It's highly recommended to create a virtual environment for this project to isolate its dependencies from other Python projects on your system. You can use tools like `venv` or `virtualenv` to create a virtual environment. Refer to their documentation for specific instructions.
+
+Once you have a virtual environment activated, run the `pip install` command mentioned earlier to install the libraries within the isolated environment.
+
+### Additional Notes
+
+- Ensure you have Python 3.x installed on your system before proceeding.
+- If you encounter any issues during installation, refer to the official documentation of each library for troubleshooting steps.
+
+## Function Explanations
+
+1. `main_page()`: Renders the main page.
+2. `nav_dept_login()`: Navigates to the department login page.
+3. `search_data()`: Navigates to the search data page.
+4. `login()`: Handles department login.
+5. `logout()`: Logs out the current user and redirects to the main page.
+6. `navindex()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+7. `index()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+8. `search()`: Navigates to the search page.
+9. `existing_list()`: Displays a list of existing students if the user is logged in, otherwise redirects to the login page.
+10. `delete_student()`: Deletes a student record from the database.
+11. `add_student()`: Navigates to the add student page.
+12. `add_staff()`: Navigates to the add staff page.
+13. `data_search()`: Displays a dropdown of subject codes based on the logged-in department's branch.
+14. `submit_form()`: Handles the submission of the add student form, validates input, and captures student images.
+15. `capture_images(usn)`: Captures images of a student using the webcam.
+16. `search_data_view()`: Searches and displays attendance data for a specific student.
+17. `tryy()`: Renders a test template.
+18. `fetch_start_end_times()`: Fetches start and end times from the subject_log table in the database.
+19. `process_video(video_capture, camera_id, known_face_encodings, known_face_names, current_date, window_name, db_connection)`: Processes video feed, recognizes faces, and logs attendance.
+20. `prg_run()`: Runs the face recognition program, capturing video from multiple cameras and logging data.
+
+## Running the Project
+
+To run the Flask server, execute the following command:
+
+```bash
+python app.py
+```
+
+This will start the Flask development server and make the application accessible at `http://0.0.0.0:5000`.
+
+## Conclusion
+
+By following the steps outlined in this README, you'll have a functional facial recognition attendance system set up, capable of recognizing individuals and logging their attendance in a MySQL database.
+
+
+
+
+For More contact:suprithgowda7782@gmail.com

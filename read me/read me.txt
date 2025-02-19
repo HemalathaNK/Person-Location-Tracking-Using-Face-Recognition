@@ -1,0 +1,65 @@
+
+**Person Location Tracking Using Face Recognition**
+
+This project implements a real-time face recognition system for tracking individuals within a designated area. It leverages Python for backend development, HTML and CSS for the user interface, and OpenCV for computer vision tasks.
+
+**Key Features:**
+
+* **Live Video Tracking:** Captures video streams from webcams or mobile devices connected as external cameras using DroidCam ([https://www.dev47apps.com/](https://www.dev47apps.com/)).
+* **Face Recognition:** Identifies known individuals within the video frames using the face_recognition library.
+* **Database Integration:** Stores facial encodings and potentially location data (depending on your implementation) in a MySQL database created using XAMPP ([https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)).
+* **User Interface:** Provides a web-based interface for department login, data search, and potentially location visualization (to be implemented).
+
+**Getting Started**
+
+**Prerequisites:**
+
+* Python 3.x ([https://www.python.org/downloads/](https://www.python.org/downloads/))
+* Visual Studio Code ([https://code.visualstudio.com/](https://code.visualstudio.com/))
+* XAMPP ([https://www.apachefriends.org/download.html](https://www.apachefriends.org/download.html)) for database management
+* DroidCam (optional, for connecting mobile devices as cameras) ([https://www.dev47apps.com/](https://www.dev47apps.com/))
+
+**Installation:**
+
+1. **Create a Database:**
+   - Set up a MySQL database using XAMPP.
+   - Create the necessary tables to store facial encodings (and potentially location data) in the database.
+
+2. **Set Up a Virtual Environment (Recommended):**
+   - Isolate project dependencies using `venv` or `virtualenv`. Refer to their documentation for specific instructions.
+   - Activate the virtual environment.
+
+3. **Install Libraries:**
+   - Open a terminal and run the following command to install required libraries:
+
+   ```bash
+   pip install flask mysql-connector-python opencv-python face-recognition
+   ```
+
+**Running the Application:**
+
+1. **Configure Database Connection:**
+   - Modify the database connection details within the Python code (usually in `app.py` or a dedicated configuration file) to match your XAMPP setup.
+
+2. **Prepare Training Data:**
+   - Capture images of individuals you want the system to recognize.
+   - Store these images in a designated folder structure.
+   - The code might require you to pre-process these images (e.g., face detection and encoding) before running the application. Refer to the specific implementation details in the code.
+
+3. **Start the Application:**
+   - Run the Python script (`app.py` or the main script) from the command line.
+   - Access the web interface in your browser, typically at `http://localhost:5000/` (default port).
+
+**Further Development:**
+
+* Implement location visualization on the user interface to display the tracked individuals' locations within the designated area (e.g., using a map or floor plan).
+* Enhance user management features (e.g., user roles, permissions).
+* Integrate with external systems for data logging or access control.
+
+**Disclaimer:**
+
+This README provides a general guideline. Specific implementation details might vary depending on your project's structure and additional features you choose to develop. Refer to the code comments and documentation for more in-depth instructions.
+
+
+
+For More contact:suprithgowda7782@gmail.com

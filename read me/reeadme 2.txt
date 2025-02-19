@@ -1,0 +1,85 @@
+Project : Person Location Tracking Using Face Recognition
+
+Language:
+python for Backend
+Html and CSS for Frontend
+
+Requirements:
+
+For coding Editor: VS code
+
+To Connect External Camera No External Software is required
+To connect mobile as external camera(wifi/usb) use Droid cam client in laptop and droid cam in mobile
+link:https://www.dev47apps.com/droidcam/windows/
+
+For Database:
+Use Xampp for Database connection Create database.
+
+
+Libraries:
+
+The code utilizes several libraries for functionalities like
+ web development,
+ computer vision,
+ and facial recognition.
+
+ Here's a breakdown of the libraries and how to install them:
+
+**Libraries:**
+
+* **Flask:** A lightweight web application framework for Python.
+* **MySQL Connector/Python:** Enables connecting to MySQL databases from Python applications.
+* **OpenCV (cv2):** A powerful library for computer vision tasks like image and video processing.
+* **face_recognition:** A wrapper library built on top of dlib, simplifying facial recognition tasks.
+
+**Installation:**
+
+1. **Using pip:**
+
+   The recommended method is using `pip`, the Python package installer. Open a terminal or command prompt and run the following command to install all the required libraries:
+
+   ```bash
+   pip install flask mysql-connector-python opencv-python face-recognition
+   ```
+
+   This will download and install the latest versions of the libraries compatible with your Python environment.
+
+2. **Using virtual environments (recommended):**
+
+   It's highly recommended to create a virtual environment for this project to isolate its dependencies from other Python projects on your system. You can use tools like `venv` or `virtualenv` to create a virtual environment. Refer to their documentation for specific instructions.
+
+   Once you have a virtual environment activated, run the `pip install` command mentioned earlier to install the libraries within the isolated environment.
+
+**Additional Notes:**
+
+* Make sure you have Python 3.x installed on your system before proceeding.
+* If you encounter any issues during installation, refer to the official documentation of each library for troubleshooting steps.
+
+By following these steps, you'll have all the necessary libraries installed and ready to use for building your facial recognition attendance system.
+
+
+
+
+
+Here are one-line explanations of each function along with their names:
+
+1. `main_page()`: Renders the main page.
+2. `nav_dept_login()`: Navigates to the department login page.
+3. `search_data()`: Navigates to the search data page.
+4. `login()`: Handles department login.
+5. `logout()`: Logs out the current user and redirects to the main page.
+6. `navindex()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+7. `index()`: Navigates to the index page if the user is logged in, otherwise redirects to the login page.
+8. `search()`: Navigates to the search page.
+9. `existing_list()`: Displays a list of existing students if the user is logged in, otherwise redirects to the login page.
+10. `delete_student()`: Deletes a student record from the database.
+11. `add_student()`: Navigates to the add student page.
+12. `add_staff()`: Navigates to the add staff page.
+13. `data_search()`: Displays a dropdown of subject codes based on the logged-in department's branch.
+14. `submit_form()`: Handles the submission of the add student form, validates input, and captures student images.
+15. `capture_images(usn)`: Captures images of a student using the webcam.
+16. `search_data_view()`: Searches and displays attendance data for a specific student.
+17. `tryy()`: Renders a test template.
+18. `fetch_start_end_times()`: Fetches start and end times from the subject_log table in the database.
+19. `process_video(video_capture, camera_id, known_face_encodings, known_face_names, current_date, window_name, db_connection)`: Processes video feed, recognizes faces, and logs attendance.
+20. `prg_run()`: Runs the face recognition program, capturing video from multiple cameras and logging data.

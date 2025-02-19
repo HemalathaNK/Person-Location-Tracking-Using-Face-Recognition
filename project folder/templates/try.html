@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Camera App</title>
+</head>
+<body>
+    <h1>Flask Camera App</h1>
+
+    <form action="/open_camera" method="GET">
+        <button type="submit">Open Camera</button>
+    </form>
+
+    <form action="/capture_photos" method="POST">
+        <label for="university_serial_number">Enter University Serial Number:</label>
+        <input type="text" id="university_serial_number" name="university_serial_number" required>
+        <button type="submit">Capture Photos</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Capture</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <h1>Capture Images</h1>
+    <form id="captureForm" method="post">
+        <label for="usn">Enter USN:</label>
+        <input type="text" id="usn" name="usn" required>
+        <button type="button" id="openCamera">Open Camera</button>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            // Function to open the camera
+            $("#openCamera").click(function () {
+                navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(function (stream) {
+                        // Show the video feed in a new window
+                        var video = document.createElement('video');
+                        document.body.appendChild(video);
+                        video.srcObject = stream;
+                        video.play();
+
+                        // Capture images when the 'Submit' button is clicked
+                        $("#captureForm").submit(function () {
+                            // Stop video stream
+                            video.srcObject.getTracks().forEach(track => track.stop());
+
+                            // Submit the form
+                            $("#captureForm").unbind('submit').submit();
+                        });
+                    })
+                    .catch(function (error) {
+                        console.error('Error accessing the camera:', error);
+                    });
+            });
+        });
+    </script>
+</body>
+</html>

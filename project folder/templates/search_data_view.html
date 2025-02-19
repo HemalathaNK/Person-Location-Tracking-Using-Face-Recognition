@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>add user</title>
+    <style>
+        body {
+            background-color: rgb(215, 209, 226);
+        }
+
+        header {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .report-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            border-bottom: 2px solid rgba(219, 104, 177, 0.59);
+        }
+
+        .recent-Articles {
+            font-size: 30px;
+            font-weight: 600;
+            color: #49d5b2;
+        }
+
+        .report-container {
+            margin-top: 6%;
+            margin-left: 10%;
+            position: absolute;
+            width:100%;
+
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 3px 3px 10px rgb(137, 197, 190);
+            padding: 20px;
+            max-width: 1200px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: left;
+        }
+
+        #option_btn1, #option_btn2 {
+            width: 30%;
+            height: 70%;
+            color: black;
+            font-size: small;
+            border-radius: 7px;
+            box-shadow: 2px 2px 2px 2px rgb(179, 179, 243);
+        }
+
+        #option_btn1 {
+            background-color: rgb(9, 204, 9);
+        }
+
+        #option_btn2 {
+            background-color: rgba(255, 0, 0, 0.975);
+        }
+
+        #option_btn1:active {
+            background-color: #0dff00;
+        }
+
+        #option_btn2:active {
+            background-color: #8a0404;
+        }
+    </style>
+</head>
+<body>
+    {% include "dept_nav.html" %}
+    {% include "header.html"%}
+    <div class="report-container"> 
+        <div class="report-header"> 
+            <h1 class="recent-Articles">PERSON LOCATION DETAIL</h1>
+            
+        </div>   
+        <table>
+            <tr>
+                <th>USN</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Camera No</th>
+            </tr>
+            {% if student_dbs %}
+                {% for student in student_dbs %}
+                <tr>
+                    <td>{{ student['usn'] }}</td>
+                    <td>{{ student['log_date'] }}</td>
+                    <td>{{ student['time'] }}</td>                                   
+                    <td>{{ student['camera_id'] }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4">Not Found</td> <!-- Span the "Not Found" message across all columns -->
+                </tr>
+            {% endif %}
+        </table>
+    </div>
+</body>
+</html>

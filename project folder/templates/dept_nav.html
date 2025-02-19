@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+          margin: 0;
+          margin-top: 0cm;
+          padding: 0;
+          box-sizing: border-box;
+          font-family: "Poppins", sans-serif;
+        }
+        ::selection {
+          color: #000;
+          background: #95effd;
+        }
+        nav {
+          position: fixed;
+          background: #1b1b1b;
+          width: 100%;
+          padding: 10px 0;
+          z-index: 12;
+        }
+        nav .menu {
+          max-width: 1250px;
+          margin: auto;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 20px;
+        }
+        .menu .logo a {
+          text-decoration: none;
+          color: #a9fff6;
+          font-size: 35px;
+          font-weight: 600;
+        }
+        .menu ul {
+          display: inline-flex;
+        }
+        
+        .menu ul li {
+          list-style: none;
+          margin-left: 7px;
+        }
+        .menu ul li:first-child {
+          margin-left: 0px;
+        }
+        
+        .dropdown {
+          position: relative;
+          display: inline-block;
+        }
+
+        .dropbtn, .logout-btn {
+          background-color: #0a0b0b;
+          color: rgb(255, 255, 255);
+          padding: 10px;
+          font-size: 15px;
+          border-radius: 5px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+        }
+
+        .dropbtn:hover, .logout-btn:hover {
+          background-color: #88efed;
+        }
+
+        .dropdown-content {
+          display: none;
+          width: 2CM;
+          position: absolute;
+          background-color: #96faff;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+        }
+
+        .dropdown-content a:hover {
+          background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+          background-color: #56b1f8;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="menu">
+          <div class="logo">
+            <a href="#">Person Location Tracking Using Face Recognition</a>
+          </div>
+          <ul>
+            <div class="dropdown">
+              <button class="dropbtn">Menu</button>
+              <div class="dropdown-content">
+                <a href="/search">Video Capture</a>
+                <a href="/existing_list">Existing list</a>
+                <a href="/search_data">Search Data</a>
+                <a href="/logout">Logout</a>
+                
+              </div>
+            </div>
+            
+           
+          </ul>
+        </div>
+    </nav> 
+</body>
+</html>

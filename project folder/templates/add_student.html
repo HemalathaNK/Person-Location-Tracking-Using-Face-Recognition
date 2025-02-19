@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page_title }}</title>
+    <style>
+        .workspace {
+            position: absolute;
+                width: 100%;
+                height: 89%;
+                background-color: rgb(234, 241, 245);
+               
+                margin-top: 4%;
+                border-radius: 2px 2px 2px 2px;
+        }
+
+        .header {
+            margin-top: 2%;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #login-form {
+            position:relative;
+            top: 5%;
+            left: 10%;
+            width: 90%;
+        }
+
+        .inpt_box {
+            margin-bottom: 3%;
+            margin-top: 1%;
+            padding-top: 8%;
+            padding-bottom: 6%;
+            margin-left: 4cm;
+        }
+        
+
+        .inpt_box input {
+            width: 30%;
+            margin-top: 2%;
+            text-align: center;
+
+            margin-left: 10%;
+            /* Adjust the width as needed */
+            box-sizing: border-box;
+            border-radius: 20px 20px 20px 20px;
+            padding: 7px;
+        }
+
+        .cam_btn
+        {
+            margin-left: 6%;
+            margin-top: 13%;
+        }
+        .cap_btn {
+            margin-top: 3%;
+            margin-left: 6%;
+        }
+
+        .cam_btn button{
+            width: 45%;
+            box-sizing: border-box;
+            border-radius: 8px 8px 8px 8px;
+            padding: 10px;
+            background-color:  rgb(209, 115, 38);
+            color: white;
+        }
+
+        .cam_btn button:focus{
+            background-color: rgb(100, 110, 147);
+        }
+        .cap_btn button {
+            width: 45%;
+            margin-left: 3cm;
+            box-sizing: border-box;
+            border-radius: 8px 8px 8px 8px;
+            padding: 10px;
+            background-color: rgb(133, 180, 245);
+            color: white;
+            
+        }
+
+        .cap_btn button:focus {
+            background-color: rgb(241, 168, 156);
+
+        }
+
+        .data_set {
+            margin-top: 0.1%;
+            background-color: rgb(102, 198, 218);
+            width: 40%;
+            margin-left:30%;
+            min-height: 75%;
+            border-radius:  10px 10px 10px 10px;
+            /* Align to the left */
+        }
+        .haad{
+            padding-top: 10%;
+            margin-top: 10%;
+        }
+        .cam_space{
+            margin-top: -33%;
+            margin-left: 55%;
+            position: relative;
+            width: 40%;
+            background-color: rgb(230, 144, 230);
+            /* background-color: transparent; */
+            min-height: 50%;
+            border-radius: 10px 10px 10px 10px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+    {% include "dept_nav.html" %}
+    {% include "header.html"%}
+    <div class="workspace">
+        <div class="header">
+            <header>
+                Add Person
+            </header>
+        </div>
+        </br>
+        <div class="data_set">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li style="color: rgb(72, 129, 170);">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <form id="captureForm" action="/submit_form" method="post">
+                <div class="inpt_box">
+                    <div>
+                    <label>USN</label>
+                    <input type="text" name="usn" placeholder="USN" required oninput="convertToUpperCase(this)"><i class="validation">
+                    </div>
+                        <label>Name</label>
+                    <input type="text" name="name" placeholder="Name" required oninput="convertToUpperCase(this)" ><i class="validation">
+                </div>
+               
+               
+                <div class="cap_btn">
+                    <button type="submit" value="cap_data_set">submit</button>
+                </div>
+            </form>
+        </div>
+     
+        <script>
+        function convertToUpperCase(input) {
+            input.value = input.value.toUpperCase();
+        }
+            $(document).ready(function () {
+    // Function to open the camera
+    $("#openCamera").click(function () {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                // Create a video element
+                var video = document.createElement('video');
+                
+                // Set the video element to play the stream
+                video.srcObject = stream;
+                video.autoplay = true;
+
+                // Append the video element to the video container
+                var videoContainer = document.getElementById('videoContainer');
+                videoContainer.appendChild(video);
+
+                // Set the style of the video element to control its positioning and visibility
+                video.style.width = '100%';
+                video.style.height = 'auto';
+                video.style.zIndex = 1000;
+
+                // Capture images when the 'Submit' button is clicked
+                $("#captureForm").submit(function () {
+                    // Stop video stream
+                    video.srcObject.getTracks().forEach(track => track.stop());
+
+                    // Submit the form
+                    $("#captureForm").unbind('submit').submit();
+                });
+            })
+            .catch(function (error) {
+                console.error('Error accessing the camera:', error);
+            });
+    });
+});
+        </script>
+</body>
+</html>
