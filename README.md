@@ -28,4 +28,6 @@ The code utilizes several libraries for functionalities like web development, co
 ### Installation
 
 #### Using `pip`
-
+Open a terminal or command prompt and run the following command to install all the required libraries:
+`pip install flask mysql-connector-python opencv-python face-recognition
+`
