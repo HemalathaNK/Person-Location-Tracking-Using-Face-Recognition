@@ -20,3 +20,8 @@ This project implements a facial recognition-based person location tracking syst
 ### Libraries
 The code utilizes several libraries for functionalities like web development, computer vision, and facial recognition.
 
+1. __Flask:__ A lightweight web application framework for Python.
+2. __MySQL Connector/Python:__ Enables connecting to MySQL databases from Python applications.
+3. __OpenCV (cv2):__ A powerful library for computer vision tasks like image and video processing.
+4. __face_recognition:__ A wrapper library built on top of dlib, simplifying facial recognition tasks.
+
