@@ -27,5 +27,5 @@ The code utilizes several libraries for functionalities like web development, co
 
 ### Installation
 
-#### Using 
+#### Using <pip>
 
