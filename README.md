@@ -16,4 +16,7 @@ This project implements a facial recognition-based person location tracking syst
 * __DroidCam:__ To use a mobile device as an external camera
      * [DroidCam Client for Laptop](https://www.dev47apps.com/droidcam/windows/)
      * DroidCam app for mobile (available on respective app stores)
+       
+### Libraries
+The code utilizes several libraries for functionalities like web development, computer vision, and facial recognition.
 
