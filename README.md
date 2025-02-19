@@ -29,5 +29,31 @@ The code utilizes several libraries for functionalities like web development, co
 
 #### Using `pip`
 Open a terminal or command prompt and run the following command to install all the required libraries:
+
 `pip install flask mysql-connector-python opencv-python face-recognition
 `
+### Using Virtual Environments (Recommended)
+It's highly recommended to create a virtual environment for this project to isolate its dependencies from other Python projects on your system. You can use tools like `venv` or `virtualenv` to create a virtual environment. Refer to their documentation for specific instructions.
+
+Once you have a virtual environment activated, run the pip install command mentioned earlier to install the libraries within the isolated environment.
+
+### Additional Notes
+* Ensure you have Python 3.x installed on your system before proceeding.
+* If you encounter any issues during installation, refer to the official documentation of each library for troubleshooting steps.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
